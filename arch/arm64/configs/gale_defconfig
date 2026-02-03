@@ -1,13 +1,19 @@
 CONFIG_LOCALVERSION="-ANNUBIS"
 # CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_I2C_CHARDEV=y
+### 2026.2.3 Enable lse algorithm ###
+CONFIG_ARM64_LSE_ATOMICS=y
+### 2026.2.3 set responsiveness to 300 hz ###
+CONFIG_HZ_300=y
+# CONFIG_HZ_100 is not set
+# CONFIG_HZ_250 is not set
 ### 2023.6.13 chengyuan@longcheer.com HTH-297468  Enable last_kmsg and last_logcat support __S ###
 CONFIG_CMDLINE_EXTEND=y
 ### 2023.6.13 chengyuan@longcheer.com HTH-297468  Enable last_kmsg and last_logcat support __E ###
 CONFIG_PREEMPT=y
 CONFIG_IKHEADERS=y
 ### 2023.6.13 chengyuan@longcheer.com HTH-297301  En-large kernel log buffer size __S ###
-CONFIG_LOG_BUF_SHIFT=21
+CONFIG_LOG_BUF_SHIFT=17
 ### 2023.6.13 chengyuan@longcheer.com HTH-297301  En-large kernel log buffer size __E ###
 CONFIG_UCLAMP_TASK=y
 CONFIG_UCLAMP_TASK_GROUP=y
@@ -442,7 +448,7 @@ CONFIG_TMS_GUIDE_DEVICE=y
 #TMS_NFC add end
 # CONFIG_PANIC_ON_OOPS is not set
 CONFIG_PANIC_TIMEOUT=1
-CONFIG_SCHEDSTATS=y
+# CONFIG_SCHEDSTATS is not set
 # CONFIG_DEBUG_PREEMPT is not set
 # CONFIG_DEBUG_BUGVERBOSE is not set
 CONFIG_RCU_CPU_STALL_TIMEOUT=60
